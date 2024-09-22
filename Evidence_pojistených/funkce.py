@@ -5,6 +5,40 @@ class Funkce():
     def __init__(self, seznam_pojistenych):
         self._seznam_pojistenych = seznam_pojistenych
 
+    def uzivatelske_rozhrani(self):
+        """
+        Funkce pro výběr akcí a ukončení v evidenci pojištěných
+        """
+        while True:
+            print("------------------------------")
+            print("Evidence pojištěných")
+            print("------------------------------")
+            print("\nVyberte si akci:")
+            print("1 - Přidat nového pojištěného")
+            print("2 - Vypsat všechny pojištěné")
+            print("3 - Vyhledat pojištěného")
+            print("4 - Konec")
+
+            vstup = input("-> ")
+
+            match vstup:
+                case "1":
+                    self.pridat_pojistence()
+                case "2":
+                    self.zobrazit_seznam()
+                case "3":
+                    self.vyhledat_pojistence()
+                case "4":
+                    print("\nKONEC")
+                    break
+                case _:
+                    print("Neplatná volba. Zadejte číslo odpovídající vybrané akci.")
+
+            try:
+                input("\nPokračujte libovolnou klávesou...")
+            except SyntaxError:
+                pass
+
     def pridat_pojistence(self):
         """
         Vytvoření nového pojištěnce a přidání do seznamu
