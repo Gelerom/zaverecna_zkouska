@@ -7,7 +7,7 @@ class Funkce():
 
     def uzivatelske_rozhrani(self):
         """
-        Funkce pro výběr akcí a ukončení v evidenci pojištěných
+        Rozhraní pro výběr akcí a ukončení v evidenci pojištěných
         """
         while True:
             print("------------------------------")
